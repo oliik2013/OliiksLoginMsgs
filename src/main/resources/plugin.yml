@@ -1,0 +1,9 @@
+name: OliiksLoginMsgs
+version: '1.0'
+main: com.oliik2013.oliiksloginmsgs
+api-version: '1.19'
+prefix: OLM
+load: STARTUP
+authors: [ oliik2013 ]
+description: An simple login msgs plugin.
+website: https://oliik2013.thedev.me

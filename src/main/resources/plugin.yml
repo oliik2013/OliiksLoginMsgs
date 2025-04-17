@@ -1,5 +1,5 @@
 name: OliiksLoginMsgs
-version: '1.0'
+version: ${project.version}
 main: com.oliik2013.oliiksloginmsgs
 api-version: '1.19'
 prefix: OLM
@@ -7,3 +7,8 @@ load: STARTUP
 authors: [ oliik2013 ]
 description: An simple login msgs plugin.
 website: https://oliik2013.thedev.me
+commands:
+  olm:
+    description: Shows the plugin version.
+    usage: /<command>
+    aliases: [olm, oliiksloginmsgs]

@@ -15,7 +15,9 @@ public final class oliiksloginmsgs extends JavaPlugin {
     public void onEnable() {
         // Plugin startup logic
         System.out.println("Enabling OLM...");
-        getServer().getPluginManager().registerEvents(new OLMListener(), this);
+        saveDefaultConfig();
+        getServer().getPluginManager().registerEvents(new OLMListener(this), this);
+
     }
 
     @Override

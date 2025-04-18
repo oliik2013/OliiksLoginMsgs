@@ -6,9 +6,14 @@ prefix: OLM
 load: STARTUP
 authors: [ oliik2013 ]
 description: An simple login msgs plugin.
-website: https://oliik2013.thedev.me
+website: https://hangar.papermc.io/oliik2013/OliiksLoginMsgs
 commands:
   olm:
     description: Shows the plugin version.
     usage: /<command>
     aliases: [olm, oliiksloginmsgs]
+    permission: oliiksloginmsgs.olm
+    permission-message: §4You dont have permission to run this command.
+permissions:
+  oliiksloginmsgs.olm:
+    description: Allows to run /olm or /oliiksloginmsgs

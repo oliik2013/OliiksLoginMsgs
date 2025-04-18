@@ -6,25 +6,43 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
+import java.util.Objects;
+
+
 public class OLMListener implements org.bukkit.event.Listener {
+
+    private final oliiksloginmsgs plugin;
+
+
+    public OLMListener(oliiksloginmsgs plugin) {
+        this.plugin = plugin;
+    }
+
+
 
     @EventHandler
     public void onJoin(PlayerJoinEvent e){
 
         Player player = e.getPlayer();
+        String joinMessage = plugin.getConfig().getString("join-message");
+        String fristjoinMessage = plugin.getConfig().getString("frist-join-message");
+
+
 
         if (player.hasPlayedBefore()) {
             if (player.getDisplayName().equals("oliik2013")) {
                 e.setJoinMessage(ChatColor.RED + "The creator of OLM, " + ChatColor.DARK_RED + player.getDisplayName() + ChatColor.RED + " has joined, welcome!");
             } else {
-                e.setJoinMessage(ChatColor.AQUA + "Welcome back to the server, " + ChatColor.BLUE + player.getDisplayName());
+                joinMessage = joinMessage.replace("%player%", e.getPlayer().getDisplayName());
+                e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(joinMessage)));
             }
         }
         else{
             if (player.getDisplayName().equals("oliik2013")) {
                 e.setJoinMessage(ChatColor.RED + "The creator of OLM, " + ChatColor.DARK_RED + player.getDisplayName() + ChatColor.RED + " has joined for theirs first time, welcome!");
             } else {
-                e.setJoinMessage(ChatColor.DARK_PURPLE + player.getDisplayName() + ChatColor.LIGHT_PURPLE + " Has joined for theirs first time! Welcome!");
+                fristjoinMessage = fristjoinMessage.replace("%player%", e.getPlayer().getDisplayName());
+                e.setJoinMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(fristjoinMessage)));
             }
         }
     }
@@ -35,11 +53,15 @@ public class OLMListener implements org.bukkit.event.Listener {
     public void onLeave(PlayerQuitEvent e){
         Player player = e.getPlayer();
 
+         String leaveMessage = plugin.getConfig().getString("leave-message");
+
+
         if (player.getDisplayName().equals("oliik2013")){
             e.setQuitMessage(ChatColor.RED + "The creator of OLM, " + ChatColor.DARK_RED + player.getDisplayName() + ChatColor.RED + " has leaved.");
         }
         else {
-            e.setQuitMessage(ChatColor.BLUE + player.getDisplayName() + ChatColor.AQUA + " have leaved, lets wait for them to come back.");
+            leaveMessage = leaveMessage.replace("%player%", e.getPlayer().getDisplayName());
+            e.setQuitMessage(ChatColor.translateAlternateColorCodes('&', Objects.requireNonNull(leaveMessage)));
         }
     }
 

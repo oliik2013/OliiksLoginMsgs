@@ -1,0 +1,3 @@
+join-message: '&3Welcome back to the server, &1%player%'
+frist-join-message: '&5%player%&d Has joined for theirs first time! Welcome!'
+leave-message: '&9%player%&b have leaved, lets wait for them to come back.'

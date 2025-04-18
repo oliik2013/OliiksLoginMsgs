@@ -21,7 +21,7 @@ jobs:
     - name: Release
       uses: HSGamer/action-mcreleaser@main
       with:
-        files: target/oliiksloginmsgs-*-shaded.jar
+        files: /home/runner/work/OliiksLoginMsgs/OliiksLoginMsgs/D:/OliiksLoginMsgs/run/plugins/oliiksloginmsgs-1.3.jar
       env:
         NAME: 1.3
         DESCRIPTION: Added commands for changing the messages

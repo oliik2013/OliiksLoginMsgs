@@ -28,7 +28,7 @@ jobs:
           files: |
             [
               {
-                "path": "target/oliiksloginmsgs-1.3-shaded.jar",
+                "path": "/home/runner/work/OliiksLoginMsgs/OliiksLoginMsgs/target/oliiksloginmsgs-1.3-shaded.jar",
                 "platforms": ["PAPER"]
               }
             ]

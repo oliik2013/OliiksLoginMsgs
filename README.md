@@ -6,9 +6,13 @@ How to use:
 
 Commands:
     /olm setjoinmessage - sets the join message
+	
     /olm setfirstjoinmessage - sets the first time join message
+	
     /olm setleavemessage - sets the leave message
+	
     /olm - See the plugin version.
+	
     /oliiksloginmsgs - Alias for /olm
 
 Permissions:

@@ -5,6 +5,7 @@ How to use:
     To change the messages, change the config.yml of this plugin or use an command listed below.
 
 Commands:
+
     /olm setjoinmessage - sets the join message
 	
     /olm setfirstjoinmessage - sets the first time join message
@@ -16,5 +17,6 @@ Commands:
     /oliiksloginmsgs - Alias for /olm
 
 Permissions:
+
     oliiksloginmsgs.olm - Permission for using the /olm command
 
